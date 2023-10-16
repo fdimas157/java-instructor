@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Task</title>
+    <style>
+        th{
+            font-size: large;
+        }
+        table, th, td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Add New Task</h1>
+    <form method="post" th:object="${task}" th:action="@{/tasks/new}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" th:field="*{name}" />
+        <input type="submit" value="Create" />
+    </form>
+    <a href="/tasks">Back to List</a> -->
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Nama</th>
+        </thead>
+        <tbody>
+            <tr th:each = "data, in : ${players}">
+                <td th:text="${data.id}"></td>
+                <td th:text="${data.name}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
