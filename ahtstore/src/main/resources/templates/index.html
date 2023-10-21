@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Kopi Kampus ITB</title>
+</head>
+<body>
+    <h1>Kopi Mahal</h1>
+    <table>
+        <tr>
+            <th>Code</th>
+            <th>Merk</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+        <tr th:each="kopu : ${coffees}">
+            <td th:text="${kopu.code}"></td>
+            <td th:text="${kopu.merk}"></td>
+            <td th:text="${kopu.type}"></td>
+            <td th:text="${kopu.price}"></td>
+        </tr>
+    </table>
+</body>
+</html>
